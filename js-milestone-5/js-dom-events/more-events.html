@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body>
+    <h2>Explore more Events </h2>
+    <button id="btn-fild">i,m button</button>
+    <input id="input-fild" type="text">
+    <input id="input-fild2" type="text">
+    <script>
+        document.getElementById('btn-fild').addEventListener('click', function(){
+            console.log('iam a button')
+        })
+        // keyup ata sob jaigei lagbe 
+        document.getElementById('input-fild').addEventListener('keyup', function(event){
+            console.log(event.target.value)
+        })
+    </script>
+</body>
+</html>

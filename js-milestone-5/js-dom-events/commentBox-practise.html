@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Comment box practise section </h2>
+
+    <div id="disply-section">
+
+     <p>Lorem ipsum dolor sit amet consectetur,adipisicingelit. Debitis ducimus fugit quam sint explicabo iusto sequi tenetur cumque, nihil aut?</p>
+
+    <p>Obcaecati exercitationem, quo eveniet culpa, mollitia perspiciatis nisi rerum voluptatibus dolore temporibus numquam quasi quaerat in explicabo molestias cumque asperiores?</p>
+
+    <p>Dolore ratione deserunt, non debitis magni consectetur, esse repellendus laudantium impedit eaque laboriosam neque tempore veritatis ab nemo necessitatibus obcaecati?</p>
+    </div>
+    <textarea id="input-fild" name="" id="" rows="10" cols="50"></textarea>
+    <br>
+    <button id="submit-btn">Submit button</button>
+    <script>
+        document.getElementById('submit-btn').addEventListener('click',function(){
+            const inputFild = document.getElementById('input-fild');
+            const inputText = inputFild.value;
+
+            const p = document.createElement('p');
+
+            p.innerText = inputText;
+
+            const displaySection = document.getElementById('disply-section');
+
+            displaySection.appendChild(p);
+        })
+    </script>
+</body>
+</html>

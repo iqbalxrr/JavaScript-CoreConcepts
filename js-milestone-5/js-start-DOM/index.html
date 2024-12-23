@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first DOM</title>
+    <link rel="stylesheet" href="styles/styles.css">
+     <style>
+        #buy-now{
+            color: blueviolet;
+        }
+     </style>
+
+</head>
+
+
+<body>
+    <header>
+        <h1>my first DOM </h1>
+    </header>
+     <main id="main-container">
+        <ul>
+            <li class="first-dom">home</li>
+            <li class="first-dom">vlog</li>
+            <li class="first-dom">big</li>
+            <li>sound</li>
+        </ul>
+     </main>
+     <section id="places-container" class="buy-container">
+        <h1  id="buy-now" class="some-class get class">buy now </h1>
+        <ul  class="buy-now" >
+            <li>sabana </li>
+            <li>sampo</li>
+            <li>bed </li>
+            <li>pen </li>
+            <li>book</li>
+        </ul>
+     </section>
+     <section>
+        <h1 id="sell-now">sell now </h1>
+        <ul id="products-list">
+            <li>sabana </li>
+            <li>sampo</li>
+            <li>bed </li>
+            <li>pen </li>
+            <li>book</li>
+        </ul>
+     </section>
+
+
+
+     <script src="js/dom.js"></script>
+     <script src="js/append.js"></script>
+     <script src="js/stylesin.js"></script>
+     <script>
+        //option-1
+        //console.log('hellow Dom')
+        const getElements = document.getElementsByTagName('li')
+        const getElement = document.getElementsByTagName('h1')
+         
+        //console.log(getElements);
+        //console.log(getElement);
+
+        for(const li of getElements){
+           //console.log(li.innerText)
+        }
+        
+        //option -2 
+        const domFirst = document.getElementsByClassName('first-dom');
+
+        for( const dom of domFirst){
+           // console.log(dom.innerText);
+        }
+
+        //option-3
+
+        const sellProduct = document.getElementById('sell-now');
+          sellProduct.innerText = 'inner text change'
+        //console.log(sellProduct);
+        // queary selector all 
+         
+        //option-4
+        //sokol li ke pabo....
+        const someli = document.querySelectorAll('.buy-now li')
+        //console.log(someli);
+        //for (li of someli){
+           // console.log(li.innerText);
+        //}
+        // sudhu first li ke pabo....
+        const Someli = document.querySelector('.buy-now li')
+        //console.log(Someli);
+        
+
+           
+
+     </script>
+     
+</body>
+</html>

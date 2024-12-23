@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate explore more </title>
+</head>
+<body>
+    <h2> Explore more delegate </h2>
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Fugit, error dolores!</li>
+            <li class="item">Aliquid, voluptates unde.</li>
+            <li class="item">Iusto, nisi doloribus.</li>
+            <li class="item">Iure, quaerat perspiciatis.</li>
+            <li class="item">Tempore, neque. Eveniet!</li>
+        </ul>
+        <button id="add-btn">add more </button>
+    </section>
+    <script>
+        //const items = document.getElementsByClassName('item');
+        //console.log(items);
+       // for(const item of items){
+          //  item.addEventListener('click',function(even){
+               // console.log(item);
+              //  console.log(even.target.parentNode);//parent ke pabo
+
+             // even.target.parentNode.removeChild(even.target);
+
+         //step -1
+         //remove child 
+
+         document.getElementById('list-container').addEventListener('click',function(even){
+                 even.target.parentNode.removeChild(even.target);
+
+             })
+
+           // step -2
+           // add child
+         document.getElementById('add-btn').addEventListener('click',function(){
+
+                const listContainer = document.getElementById('list-container');
+                 
+                const li = document.createElement('li');
+                li.innerText = 'new items added';
+                li.classList.add('item');//new li a class add kora upei 
+                listContainer.appendChild(li);
+
+              })
+            
+        
+
+    </script>
+</body>
+</html>

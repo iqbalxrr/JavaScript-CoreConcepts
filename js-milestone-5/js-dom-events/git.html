@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Git information </title>
+</head>
+<body>
+    <h2 id="infor-fild">Git information</h2>
+    <input id="input-fild" type="text" placeholder="please type delete">
+    <button id="dlt-btn" disabled >click me </button>
+    <script>
+       document.getElementById('input-fild').addEventListener('keyup', function(even){
+        const getTypeCommt =even.target.value;
+         const deletebtn =document.getElementById('dlt-btn');
+        if(getTypeCommt === 'delete'){
+         deletebtn.removeAttribute('disabled')
+
+        }
+         else{
+            deletebtn.setAttribute('disabled',true)
+         }
+       })
+      document.getElementById('dlt-btn').addEventListener('click', function(){
+       const secret = document.getElementById('infor-fild');
+       secret.style.display = 'none';
+      })
+    </script>
+</body>
+</html>

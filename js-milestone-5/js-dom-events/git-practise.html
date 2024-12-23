@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git practise</title>
+</head>
+<body>
+    <h2> Git practise Section </h2>
+    <p id="display-section">Lorem ipsum dolor sit amet.</p> 
+    <input id="input-field" type="text">
+    <button id="delete-btn" disabled >Delete</button> 
+    <script>
+        //section -1
+        document.getElementById('input-field').addEventListener('keyup', function(event){
+            const inputText =event.target.value;
+            
+            const deleteBtn = document.getElementById('delete-btn')
+
+           if(inputText === 'delete'){
+           
+            deleteBtn.removeAttribute('disabled')
+
+           }
+           else{
+            deleteBtn.setAttribute('disabled', true)
+           }
+
+        })
+
+        //section - 2
+        document.getElementById('delete-btn').addEventListener('click', function(){
+          const displaySection= document.getElementById('display-section');
+          displaySection.style.display = 'none';
+        })
+    </script>
+</body>
+</html>

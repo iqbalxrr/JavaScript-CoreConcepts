@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Top Five</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- tailwind custome css -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    
+    <style>
+        .header-font {
+            font-family: Georgia;
+            
+        }
+    </style>
+</head>
+<body class="bg-black ">
+  <header class="border-red-500 border-2 m-4 bg-black ">
+       <h1 class=" text-center text-6xl mt-16 text-orange-600  font-bold  font-family: Georgia ">Select Your Best Five</h1>
+       <h3 class=" text-center text-white text-xl mx-20 mt-6 mb-20 pb-8  ">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit <br> officia consequat duis enim velit mollit. Exercitation veniam consequat  <br>sunt nostrud amet.</h3>
+  </header>  
+  <main class="m-6">
+    <section >
+        <div class="flex flex-row  " >
+            <!-- 1 -->
+        <div class=" grid grid-cols-3 border-red-500 border-2 m-4 gap-4 p-4 mx-auto w-8/12">
+            <div>
+                <img src="images/Rectangle 144.png" alt="">
+                <h1 id="mbappe" class="text-center text-white  text-2xl pt-2 font-bold ">Kylian Mbappé</h1>
+                <ul class="flex gap-3 ml-7 text-slate-300 pt-2">
+                    <li>36 Goals</li>
+                    <li>120 Assist</li>
+                </ul>
+                <button id="mbappe-select" class=" text-white  mx-5 w-10/12 p-2 mt-4 mb-2  
+                bg-blue-500 rounded ">SELECT</button>
+            </div>
+
+            <div>
+                <img src="images/Rectangle 144 (1).png" alt="">
+                <h1 id="neymar" class="text-center text-white  text-2xl pt-2 font-bold ">Neymar Jr</h1>
+                <ul class="flex gap-3 ml-7 text-slate-300 pt-2">
+                    <li>36 Goals</li>
+                    <li>120 Assist</li>
+                </ul>
+                <button id="neymar-select" class=" text-white mx-5 w-10/12 p-2 mt-4 mb-2  
+                bg-blue-500 rounded ">SELECT</button>
+            </div>
+
+            <div>
+                <img src="images/Rectangle 144 (2).png" alt="">
+                <h1 id="messi" class="text-center text-white  text-2xl pt-2 font-bold ">Lionel Messi</h1>
+                <ul class="flex gap-3 ml-7 text-slate-300 pt-2">
+                    <li>36 Goals</li>
+                    <li>120 Assist</li>
+                </ul>
+                <button id="messi-select" class=" text-white mx-5 w-10/12 p-2 mt-4 mb-2  
+                bg-blue-500 rounded ">SELECT</button>
+            </div>
+             
+            <div>
+                <img src="images/Rectangle 144 (3).png" alt="">
+                <h1 id="renato" class="text-center text-white  text-2xl pt-2 font-bold ">Renato Sanches</h1>
+                <ul class="flex gap-3 ml-7 text-slate-300 pt-2">
+                    <li>36 Goals</li>
+                    <li>120 Assist</li>
+                </ul>
+                <button id="renato-select" class=" text-white mx-5 w-10/12 p-2 mt-4 mb-2  
+                bg-blue-500 rounded ">SELECT</button>
+            </div>
+
+            <div>
+                <img src="images/Rectangle 144 (4).png" alt="">
+                <h1 id="machado" class="text-center text-white  text-2xl pt-2 font-bold ">Vítor Machado</h1>
+                <ul class="flex gap-3 ml-7 text-slate-300 pt-2">
+                    <li>36 Goals</li>
+                    <li>120 Assist</li>
+                </ul>
+                <button id="machado-select" class=" text-white mx-5 w-10/12 p-2 mt-4 mb-2  
+                bg-blue-500 rounded ">SELECT</button>
+            </div>
+
+            <div>
+                <img src="images/Rectangle 144 (5).png" alt="">
+                <h1 id="ramos" class="text-center text-white  text-2xl pt-2 font-bold ">Sergio Ramos</h1>
+                <ul class="flex gap-3 ml-7 text-slate-300 pt-2">
+                    <li>36 Goals</li>
+                    <li>120 Assist</li>
+                </ul>
+                <button id="ramos-select" class=" text-white mx-5 w-10/12 p-2 mt-4 mb-2  
+                bg-blue-500 rounded ">SELECT</button>
+            </div>
+            
+        </div>
+        <!-- 2 -->
+         <div class="border-red-500 border-2 w-auto m-4 gap-4">
+            <div class=" text-white border-red-500 border-2">
+                <h1 class="text-center text-2xl  p-10 ">Selected - V</h1>
+                <ol id="oderd-list" class=" list-decimal px-8 pb-4">
+                    <!-- <li>Lionel Messi</li>
+                    <li>Kylian Mbappé</li>
+                    <li>Neymar Jr</li>
+                    <li>Renato Sanches</li>
+                    <li>Keylor Navas</li> -->
+                </ol>
+
+            </div>
+            <div class="border-red-500 border-2 text-white ">
+              <h1  class="text-center text-2xl  p-10 ">Budget</h1>
+              <div class="flex flex-row gap-8 mb-5">
+                <p class="ml-4">Per Player</p>
+              <input  id="per-player" class="w-6/12 text-black bg-gray-300 rounded " type="text">
+              </div>
+              <p class="ml-4 mb-4" >Player Expenses : $<span id="player-expenses">0</span></p>
+
+              <button id="calculate-total" class=" text-white mx-6 w-10/12 p-2  mb-6  
+                bg-blue-500 rounded " >Calculate Total</button>
+
+              <div class="flex flex-row gap-10 mb-5">
+                <p class="ml-4">Manager</p>
+              <input id="manager" class="w-6/12 text-black bg-gray-300 rounded" type="text">
+              </div>
+              <div class="flex flex-row gap-10 mb-5" >
+                <p class="ml-4">Coach</p>
+              <input id="coach" class="w-6/12 ml-5 text-black bg-gray-300 rounded" type="text">
+              </div>
+              <br>
+              <button id="calculate-all-cost" class=" text-white mx-6 w-10/12 p-2  mb-2  
+                bg-blue-500  rounded " >Calculate Total</button>
+                <p class="ml-4 my-4">Total $ <span id="total " class="ml-20 pl-10 text-orange-500">0</span></p> 
+            </div>
+         </div>
+        </div>
+    </section>
+  </main>
+  <script src="js/selectFive.js"></script>
+  <script src="js/calculate-total.js"></script>
+  <script src="js/calculate-all-cost.js"></script>
+</body>
+</html>
