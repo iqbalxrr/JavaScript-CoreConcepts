@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone hanting</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header>
+        <h2 class="text-center text-5xl my-10">MOBILE PHONE STORE </h2>
+    </header>
+
+    <main>
+
+        <!-- search section -->
+         <section class="container mx-auto  ">
+
+        <div class="my-6">
+        
+          <input id="input-fild" type="text"
+            placeholder="search  here"
+            class="input input-bordered input-accent w-full max-w-xs" />
+            <button onclick="searchphone()" class="btn btn-accent">SEARCH</button>
+
+            </div>
+            
+         </section>
+
+         <!-- loading section  -->
+
+         <section  class="container mx-auto ">
+            <div id="toggle-loader" class="text-center my-10 hidden ">
+                <span class="loading loading-dots loading-lg"></span>
+            </div>
+         </section>
+
+
+        <!-- card section  -->
+      <section class="container mx-auto ">
+        <!-- parents div  -->
+        <div id="phon-container" class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+
+                    <!-- child div er vitor a  -->
+        </div>
+      </section>
+
+      <!-- show all btn section  -->
+
+      <section id="show-all-btn" class="container mx-auto text-center hidden my-6">
+           <div class="">
+            <button class="btn btn-primary"> Show All Phone</button>
+           </div>
+      </section>
+
+
+      <!-- modal section  -->
+
+      <section>
+        <div>
+            <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+                <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+        </div>
+    </div>
+</dialog>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/practise.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUNTING PHONE API</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script> 
+
+</head>
+<body >
+    <header>
+        <h1 class="text-5xl text-center my-9 ">HUNTING PHONE API </h1>
+    </header>
+     <main>
+      <!-- search section  -->
+       <section class="container mx-auto my-4 ">
+        <div class= "bg-gray-100 px-4 py-4 rounded-xl ">
+          <input id="search-filed"
+            type="text" 
+            placeholder=" search here"
+            class="input input-bordered input-secondary w-full max-w-xs" />
+            <button onclick="handalSearch()" class="btn btn-outline btn-secondary ml-3">Search</button>
+  
+             </div>
+                <!-- loading section  -->
+             <section>
+              <div id="loading-spinner" class="text-center my-40 hidden ">
+                <span class="loading loading-spinner text-warning"></span>
+              </div>
+             </section>
+
+             <!-- result section  -->
+       </section>
+         <section class="container mx-auto ">
+            <div id="phone-container"  class="grid grid-cols-1 md:grid-cols-2   lg:grid-cols-3 gap-1">
+                <!-- <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img
+                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                        alt="Shoes"
+                        class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions">
+                        <button class="btn btn-primary"> Show Details </button>
+                      </div>
+                    </div>
+                  </div> -->
+            </div>
+         </section>
+
+           <!-- show all btn -->
+         <section class="container text-center mx-auto my-4 "> 
+          <div id="show-all-container" class="bg-gray-100 px-4 py-4 rounded-xl hidden ">
+            <button class="btn btn-outline btn-warning">Show All</button>
+          </div>
+         </section>
+
+         <!-- show modal section  -->
+
+          <section>
+             
+            <!-- Open the modal using ID.showModal() method -->
+
+       <div class="container mx-auto">
+       
+        <dialog id="showDetails_modal_5" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <h3 id="show-detail-phone-name" class="text-3xl font-bold">Hello!</h3>
+            <div id="details-container">
+
+            </div>
+
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+        
+
+       </div>
+          </section>
+
+     </main>
+     <footer>
+
+     </footer>
+     <script src="js/phone.js"></script>
+     <script src="js/handalsearch.js"></script>   
+</body>
+</html>
